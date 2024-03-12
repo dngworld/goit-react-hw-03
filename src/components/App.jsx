@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './App.css';
+import css from './App.module.css';
 import ContactList from './ContactList/ContactList';
 import SearchBox from './SearchBox/SearchBox';
 import ContactForm from './ContactForm/ContactForm';
@@ -44,7 +44,7 @@ const App = () => {
   return (
     <div>
       <div>
-        <h1>Phonebook</h1>
+        <h1 className={css.title}>Phonebook</h1>
         <ContactForm onAdd={addContact} />
         <SearchBox value={nameFilter} onChange={setNameFilter} />
         <ContactList contacts={Filter} onDelete={onDelete} />

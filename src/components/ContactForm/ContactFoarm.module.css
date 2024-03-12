@@ -1,0 +1,39 @@
+.container {
+  border: 1px solid #212121;
+  margin: 20px;
+  padding: 30px;
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+}
+.field {
+  margin-bottom: 15px;
+  height: 20px;
+  width: 200px;
+  border: 1px solid #212121;
+
+  padding-left: 10px;
+}
+.error {
+  display: block;
+  color: red;
+}
+
+.button {
+  display: block;
+  height: 30px;
+  width: 120px;
+  border: 1px solid lightgray;
+  background-color: white;
+  cursor: pointer;
+  transition: border 250ms ease-in;
+}
+
+.button:hover {
+  border: 1px solid green;
+  background-color: green;
+}

@@ -2,8 +2,7 @@ import { useId } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { nanoid } from 'nanoid';
-// import css from './ContactForm.module.css';
-
+import css from './ContactFoarm.module.css';
 const contactSchema = Yup.object().shape({
   name: Yup.string()
     .min(3, 'Not enough symbols!')
@@ -30,18 +29,34 @@ const ContactForm = ({ onAdd }) => {
       }}
       validationSchema={contactSchema}
     >
-      <Form>
+      <Form className={css.container}>
         <div>
-          <label htmlFor={nameFieldId}>Name</label>
-          <Field type="text" name="name" id={nameFieldId} />
-          <ErrorMessage name="name" component="span" />
+          <label className={css.label} htmlFor={nameFieldId}>
+            Name
+          </label>
+          <Field
+            className={css.field}
+            type="text"
+            name="name"
+            id={nameFieldId}
+          />
+          <ErrorMessage className={css.error} name="name" component="span" />
         </div>
         <div>
-          <label htmlFor={numberFieldId}>Number</label>
-          <Field type="text" name="number" id={numberFieldId} />
-          <ErrorMessage name="number" component="span" />
+          <label className={css.label} htmlFor={numberFieldId}>
+            Number
+          </label>
+          <Field
+            className={css.field}
+            type="text"
+            name="number"
+            id={numberFieldId}
+          />
+          <ErrorMessage className={css.error} name="number" component="span" />
         </div>
-        <button type="submit">Add contact</button>
+        <button className={css.button} type="submit">
+          Add contact
+        </button>
       </Form>
     </Formik>
   );
